@@ -7,6 +7,8 @@ import {
   addressTextField,
   othersInfoTextField,
   checkBoxField,
+  curierRadioBtn,
+  roketPatmentRadioBtn
 } from "../pageObjects/OrderBookLocatior";
 import fs from "fs";
 const testData = JSON.parse(fs.readFileSync(`./data/users.json`, `utf-8`));
@@ -43,6 +45,12 @@ class OrderBook extends BasePage {
   }
   async clickCheckBox() {
     await this.waitAndClick(checkBoxField);
+  }
+  async clickCurierRadioBtn() {
+    await this.waitAndClick(curierRadioBtn);
+  }
+  async clickRoketPaymentRadioBtn() {
+    await this.waitAndClick(roketPatmentRadioBtn);
   }
 }
 export default OrderBook;

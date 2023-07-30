@@ -3,9 +3,9 @@ Search Favourite Writer from Writer Page and view All books and selected One of 
 
 
 Scenario Description: 
-User Login with valid username/email and password.Navigate to Writter page Search Writter and Selcet Writter and view 
-all books of the selected writter, select a book from all books and view book details,confirm order by fillup the form of 
-user details.
+User Navigate To the Home Page and goto Login (লগইন / রেজিস্টার) page and Login with valid username/email and password.Navigate to Writer(লেখক) page Search Writer and Selcet Writter and view 
+all books of the selected writer, select a book from all books and view book details,confirm order by fillup the form of 
+user details and successfully logout.
 
 Test test.steps:
 1.	Navigate to Website Home Page and Verify the url and title of home page.
@@ -84,6 +84,8 @@ test.describe.serial("Order Confirm From Writter Page", () => {
       await orderBook.addressFieldVale();
       await orderBook.othersFieldValue();
       await orderBook.clickCheckBox();
+      await orderBook.clickCurierRadioBtn();
+      await orderBook.clickRoketPaymentRadioBtn();
     });
 
     await test.step("After Successfully fill User Info Logout Form Site", async () => {

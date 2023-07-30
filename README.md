@@ -31,4 +31,10 @@ Install the dependencies and devDependencies to run the test.
 npm install
 npx playwright install
 ```
+## Run Application
+```bash
+npx playwright test
+OR
+npx playwright test TC_001_Order_book_from_writer.spec.js
+```
 

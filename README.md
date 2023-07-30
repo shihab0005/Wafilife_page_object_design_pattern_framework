@@ -23,5 +23,6 @@ Install the dependencies and devDependencies to run the test.
 - Navigate to project's directory on terminal and run the following commands:
 Clone the repository
 ```bash
-git clone https://github.com/shihab0005/Wafilife_page_object_design_pattern_framework.git
+ git clone https://github.com/shihab0005/Wafilife_page_object_design_pattern_framework.git
 ```
+

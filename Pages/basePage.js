@@ -17,7 +17,9 @@ class BasePage {
   async wait() {
     return this.page.waitForTimeout(10000);
   }
-
+  async waitForPageLoad() {
+    return await this.page.waitForLoadState("networkidle");
+  }
   async waitAndClick(selector) {
     await this.page.waitForSelector(selector);
     return await this.page.click(selector);

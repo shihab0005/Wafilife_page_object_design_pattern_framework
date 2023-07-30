@@ -19,10 +19,12 @@ class LoginPage extends BasePage {
 
   async openAPP() {
     await super.open(baseUrl);
+    await this.waitForPageLoad();
   }
 
   async navigateToLoginPage() {
     await this.waitAndClick(loginBtnNav);
+    await this.waitForPageLoad();
   }
 
   async verifyEmailElementIsVisible() {
@@ -39,10 +41,12 @@ class LoginPage extends BasePage {
     await this.waitAndFill(emailField, testData.email);
     await this.waitAndFill(passwordField, testData.password);
     await this.waitAndClick(loginBtn);
+    await this.waitForPageLoad();
   }
 
   async clickMyAccountBtn() {
     await this.waitAndClick(myAccount);
+    await this.waitForPageLoad();
   }
 
   async logoutFromWebsite() {
@@ -50,6 +54,7 @@ class LoginPage extends BasePage {
       myAccountAllOptions,
       testData.logoutText
     );
+    await this.waitForPageLoad();
   }
 }
 export default LoginPage;

@@ -14,7 +14,7 @@ Scenario Description: User Navigate To the Home Page and goto Login (লগই�
 password.Navigate to Writer(লেখক) page Search Writer and Selcet Writter and view all books of the selected writer, select a book
 from all books and view book details, confirm order by fillup the form of user details and successfully logout.
 
-Testname: TC_001_Order_book_from_writer.spec.js
+Testname: TC_002_Order_book_from_writer.spec.js
 ```
 
 ## Installation
@@ -35,6 +35,6 @@ npx playwright install
 ```bash
 npx playwright test
 OR
-npx playwright test TC_001_Order_book_from_writer.spec.js
+npx playwright test TC_002_Order_book_from_writer.spec.js
 ```
 

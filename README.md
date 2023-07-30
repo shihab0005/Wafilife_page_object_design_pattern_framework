@@ -21,8 +21,14 @@ Testname: TC_001_Order_book_from_writer.spec.js
 Install the dependencies and devDependencies to run the test.
 - Clone (OR) Download this repo as zip folder on to your local machine
 - Navigate to project's directory on terminal and run the following commands:
-Clone the repository
+  
+**Clone the repository**
 ```bash
  git clone https://github.com/shihab0005/Wafilife_page_object_design_pattern_framework.git
+```
+**Install dependencies**
+```bash
+npm install
+npx playwright install
 ```
 

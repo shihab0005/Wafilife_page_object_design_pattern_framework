@@ -41,6 +41,12 @@ class BasePage {
     }
   }
 
+  async verifyElementText(selector, ele_text) {
+    await this.page.waitForSelector(selector);
+    const element = this.page.locator(selector);
+    await expect(element).toHaveText(ele_text);
+  }
+
   async selectSingleElementFromElements(selector, value) {
     const options = this.page.locator(selector);
     const total = await options.count();
@@ -51,6 +57,14 @@ class BasePage {
         await options.nth(i).click();
         break;
       }
+    }
+  }
+  async selectAllElementFromElements(selector) {
+    const options = this.page.locator(selector);
+    const total = await options.count();
+    console.log("total Options: " + total);
+    for (let i = 1; i < total - 1; i++) {
+      await options.nth(i).click();
     }
   }
 

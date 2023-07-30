@@ -8,6 +8,12 @@ import {
   loginBtn,
   myAccount,
   myAccountAllOptions,
+  myAccountTitle,
+  logoutBtn,
+  profileBtn,
+  errorMsgDiv,
+  errorMsgTxt,
+  lostYourPassword,
 } from "../pageObjects/LoginLocators";
 
 const testData = JSON.parse(fs.readFileSync(`./data/users.json`, `utf-8`));
@@ -24,7 +30,7 @@ class LoginPage extends BasePage {
 
   async navigateToLoginPage() {
     await this.waitAndClick(loginBtnNav);
-    await this.waitForPageLoad();
+    // await this.waitForPageLoad();
   }
 
   async verifyEmailElementIsVisible() {
@@ -36,10 +42,45 @@ class LoginPage extends BasePage {
   async verifyLoginBtnElementIsVisible() {
     return await this.isElementVisible(loginBtn, testData.notVisibleText);
   }
+  async verifyInvalidMessageElementIsVisible() {
+    return await this.isElementVisible(errorMsgDiv, testData.notVisibleText);
+  }
+
+  async verifyMyAccountElementIsVisible() {
+    return await this.isElementVisible(myAccountTitle, testData.notVisibleText);
+  }
+  async verifyMyAccountText() {
+    return await this.verifyElementText(myAccountTitle, testData.myAccountText);
+  }
+  async verifyLogoutText() {
+    return await this.verifyElementText(logoutBtn, testData.logoutText);
+  }
+  async verifyProfileText() {
+    return await this.verifyElementText(profileBtn, testData.profileText);
+  }
+  async verifyErrorMsgText() {
+    return await this.verifyElementText(errorMsgTxt, testData.errorMessageText);
+  }
+
+  async verifyNavigateToLostYourPasswordPage() {
+    await this.waitAndClick(lostYourPassword);
+  }
 
   async loginWithCredential() {
     await this.waitAndFill(emailField, testData.email);
     await this.waitAndFill(passwordField, testData.password);
+    await this.waitAndClick(loginBtn);
+    await this.waitForPageLoad();
+  }
+  async loginWithInvalidCredential() {
+    await this.waitAndFill(emailField, testData.Iemail);
+    await this.waitAndFill(passwordField, testData.Ipassword);
+    await this.waitAndClick(loginBtn);
+    await this.waitForPageLoad();
+  }
+  async loginWithInvalidPasswordCredential() {
+    await this.waitAndFill(emailField, testData.email);
+    await this.waitAndFill(passwordField, testData.Ipassword);
     await this.waitAndClick(loginBtn);
     await this.waitForPageLoad();
   }
@@ -55,6 +96,9 @@ class LoginPage extends BasePage {
       testData.logoutText
     );
     await this.waitForPageLoad();
+  }
+  async verifyAllOptionsFromMyAccount() {
+    await this.selectAllElementFromElements(myAccountAllOptions);
   }
 }
 export default LoginPage;

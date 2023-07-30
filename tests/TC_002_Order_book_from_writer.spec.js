@@ -92,6 +92,5 @@ test.describe.serial("Order Confirm From Writter Page", () => {
       await loginPage.clickMyAccountBtn();
       await loginPage.logoutFromWebsite();
     });
-    await page.pause();
   });
 });

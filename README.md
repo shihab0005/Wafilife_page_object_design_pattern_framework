@@ -8,5 +8,8 @@
 
 
 ### Scenarios
-
+- Clone Project Command:
+```bash
+   git clone https://github.com/shihab0005/Lets-buy-product.git 
+```
 

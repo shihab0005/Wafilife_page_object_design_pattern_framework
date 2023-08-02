@@ -43,6 +43,7 @@ test.describe.serial("Order Confirm From Writter Page", () => {
   }) => {
     await test.step("Navigate to Website Home Page", async () => {
       await loginPage.openAPP();
+      
       expect(await loginPage.getTitle()).toBe(title);
       expect(await loginPage.getUrl()).toBe(url);
     });
@@ -68,7 +69,7 @@ test.describe.serial("Order Confirm From Writter Page", () => {
 
     await test.step("Search Your Favourit Writer ", async () => {
       await writerPage.searchWriter();
-      await writerPage.findYourSearchWriter();
+     await writerPage.findYourSearchWriter();
     });
 
     await test.step("Select Your Favourite Book from All books From Your Favourit Writer", async () => {

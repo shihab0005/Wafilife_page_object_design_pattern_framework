@@ -25,12 +25,13 @@ class LoginPage extends BasePage {
 
   async openAPP() {
     await super.open(baseUrl);
-    await this.waitForPageLoad();
+    // await this.waitForPageLoad();
   }
 
   async navigateToLoginPage() {
+    await this.waitFor(loginBtnNav)
     await this.waitAndClick(loginBtnNav);
-    // await this.waitForPageLoad();
+
   }
 
   async verifyEmailElementIsVisible() {
@@ -76,18 +77,18 @@ class LoginPage extends BasePage {
     await this.waitAndFill(emailField, testData.Iemail);
     await this.waitAndFill(passwordField, testData.Ipassword);
     await this.waitAndClick(loginBtn);
-    await this.waitForPageLoad();
+    // await this.waitForPageLoad();
   }
   async loginWithInvalidPasswordCredential() {
     await this.waitAndFill(emailField, testData.email);
     await this.waitAndFill(passwordField, testData.Ipassword);
     await this.waitAndClick(loginBtn);
-    await this.waitForPageLoad();
+    // await this.waitForPageLoad();
   }
 
   async clickMyAccountBtn() {
     await this.waitAndClick(myAccount);
-    await this.waitForPageLoad();
+    // await this.waitForPageLoad();
   }
 
   async logoutFromWebsite() {
@@ -95,7 +96,7 @@ class LoginPage extends BasePage {
       myAccountAllOptions,
       testData.logoutText
     );
-    await this.waitForPageLoad();
+    // await this.waitForPageLoad();
   }
   async verifyAllOptionsFromMyAccount() {
     await this.selectAllElementFromElements(myAccountAllOptions);

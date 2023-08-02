@@ -19,6 +19,7 @@ class OrderBook extends BasePage {
   }
 
   async clickOrderConfirmBtn() {
+    await this.waitFor(confirmOrder)
     await this.waitAndClick(confirmOrder);
   }
 

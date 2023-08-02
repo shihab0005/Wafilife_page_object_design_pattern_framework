@@ -14,12 +14,17 @@ class WriterPage extends BasePage {
   }
   async navigateToWriterPage() {
     await this.waitAndClick(writerBtn);
+    // await this.waitForPageLoad();
   }
+
 
   async searchWriter() {
     await this.waitAndFill(writerSerachField, testData.writerNameType);
     await this.waitAndClick(writerSearchBtn);
+    // await this.waitForPageLoad();
+    // await this.selectSingleElementFromElements(allWriters, testData.writerName);
   }
+
   async findYourSearchWriter(){
     await this.selectSingleElementFromElements(allWriters, testData.writerName);
   };

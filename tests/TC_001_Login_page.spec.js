@@ -6,7 +6,7 @@ User Navigate To the Home Page and goto Login (লগইন / রেজিস্
 and password and also Login With invalid Credentials and verify all error message. 
 
 
-Test test.steps:
+Test cases:
 1.	Navigate to Website Home Page .
 2.	Click Login Button Navigate to Login Page.
 3.	Login with valid Credential and Check All fields.

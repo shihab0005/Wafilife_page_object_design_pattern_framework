@@ -17,8 +17,8 @@ class BasePage {
   async wait() {
     return this.page.waitForTimeout(10000);
   }
-  async waitFor(selector){
-    await this.page.locator(selector).waitFor()
+  async waitFor(selector) {
+    await this.page.locator(selector).waitFor();
   }
   async waitForPageLoad() {
     return await this.page.waitForLoadState("networkidle");
@@ -30,6 +30,10 @@ class BasePage {
 
   async waitAndFill(selector, text) {
     await this.page.fill(selector, text);
+  }
+
+  async getValueFromInputField(selector) {
+    return await this.page.locator(selector).inputValue();
   }
 
   async isElementVisible(selector, errorMessage) {
@@ -56,7 +60,7 @@ class BasePage {
     console.log(value);
     for (let i = 0; i < total; i++) {
       const text = await options.nth(i).textContent();
-      if (text.trim()===value.trim()) {
+      if (text.trim() === value.trim()) {
         await options.nth(i).click();
         break;
       }

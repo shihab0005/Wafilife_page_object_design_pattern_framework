@@ -13,6 +13,8 @@
   "logoutText": "লগআউট",
   "profileText": "প্রোফাইল",
   "myAccountText": "আমার অ্যাকাউন্ট",
+  "searchBookNameText": "abc",
+  "searchBookName": "Initial ABC Vocabulary",
   "errorMessageText": "Unknown email address. Check again or try your username.",
   "errorMessagePassText": "Unknown email address. Check again or try your username.",
   "locked_out_user": "locked_out_user",

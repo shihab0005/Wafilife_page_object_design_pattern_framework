@@ -14,7 +14,12 @@ import {
   errorMsgDiv,
   errorMsgTxt,
   lostYourPassword,
+  cLoginBtn,
+  cUsername,
+  cPassword,
+  cSubmit,
 } from "../pageObjects/LoginLocators";
+import { expect } from "@playwright/test";
 
 const testData = JSON.parse(fs.readFileSync(`./data/users.json`, `utf-8`));
 
@@ -29,9 +34,8 @@ class LoginPage extends BasePage {
   }
 
   async navigateToLoginPage() {
-    await this.waitFor(loginBtnNav)
+    await this.waitFor(loginBtnNav);
     await this.waitAndClick(loginBtnNav);
-
   }
 
   async verifyEmailElementIsVisible() {
@@ -100,6 +104,15 @@ class LoginPage extends BasePage {
   }
   async verifyAllOptionsFromMyAccount() {
     await this.selectAllElementFromElements(myAccountAllOptions);
+  }
+
+  ///confirm order page login
+
+  async loginFromConfirmOrderPage() {
+    await this.waitAndClick(cLoginBtn);
+    await this.waitAndFill(cUsername, testData.email);
+    await this.waitAndFill(cPassword, testData.password);
+    await this.waitAndClick(cSubmit);
   }
 }
 export default LoginPage;

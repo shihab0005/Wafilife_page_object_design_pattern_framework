@@ -1,4 +1,4 @@
-import BasePage from "./basepage";
+ import BasePage from "./basepage";
 import {
   confirmOrder,
   districtSelector,
@@ -8,7 +8,7 @@ import {
   othersInfoTextField,
   checkBoxField,
   curierRadioBtn,
-  roketPatmentRadioBtn
+  roketPatmentRadioBtn,
 } from "../pageObjects/OrderBookLocatior";
 import fs from "fs";
 const testData = JSON.parse(fs.readFileSync(`./data/users.json`, `utf-8`));
@@ -19,7 +19,7 @@ class OrderBook extends BasePage {
   }
 
   async clickOrderConfirmBtn() {
-    await this.waitFor(confirmOrder)
+    await this.waitFor(confirmOrder);
     await this.waitAndClick(confirmOrder);
   }
 

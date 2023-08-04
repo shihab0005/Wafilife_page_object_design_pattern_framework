@@ -18,7 +18,6 @@ Test steps:
 9.	Logout from the website.
 */
 
-import { expect } from "@playwright/test";
 import test from "../testFixture/fixture";
 
 test.describe
@@ -73,7 +72,5 @@ test.describe
       await loginPage.clickMyAccountBtn();
       await loginPage.logoutFromWebsite();
     });
-
-    await page.push();
   });
 });

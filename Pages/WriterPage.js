@@ -1,4 +1,4 @@
-import BasePage from "./basepage";
+ import BasePage from "./basepage";
 import fs from "fs";
 import {
   writerBtn,

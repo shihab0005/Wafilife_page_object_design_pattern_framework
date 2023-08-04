@@ -12,7 +12,7 @@ export const errorMsgTxt = ".woocommerce-error li";
 export const lostYourPassword = ".woocommerce-error li a";
 
 //login in confirm order page
-export const cLoginBtn = "//label[@class='checkbox']/a";
+export const cLoginBtn = "//a[contains(text(),'লগইন করুন')]";
 export const cUsername = "#username";
 export const cPassword = "#password";
 export const cSubmit = "[name='login']";

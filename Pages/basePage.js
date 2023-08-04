@@ -27,7 +27,9 @@ class BasePage {
   async waitAndClick(selector) {
     return await this.page.click(selector);
   }
-
+  async waitAndHardClick(selector) {
+		return await this.page.$eval(selector, element => element.click())
+	}
   async waitAndFill(selector, text) {
     await this.page.fill(selector, text);
   }

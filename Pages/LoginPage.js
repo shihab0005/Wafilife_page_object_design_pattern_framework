@@ -19,7 +19,6 @@ import {
   cPassword,
   cSubmit,
 } from "../pageObjects/LoginLocators";
-import { expect } from "@playwright/test";
 
 const testData = JSON.parse(fs.readFileSync(`./data/users.json`, `utf-8`));
 

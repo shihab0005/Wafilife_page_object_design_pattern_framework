@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "test:chrome": "npx playwright test --project=Chrome"
+    "test:chrome": "npx playwright test --project=Chrome",
+    "test:one": "npx playwright test TC_001_Login_page.spec.js --project=Chrome",
+    "test:two": "npx playwright test TC_002_Order_book_from_writer.spec.js  --project=Chrome",
+    "test:three": "npx playwright test TC_003_Order_book_Search.spec.js --project=Chrome"
   },
   "keywords": [],
   "author": "",

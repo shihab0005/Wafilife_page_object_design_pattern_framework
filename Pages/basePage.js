@@ -24,12 +24,17 @@ class BasePage {
     return await this.page.waitForLoadState("networkidle");
   }
 
+  async scrollByMouseWheel() {
+    await this.page.evaluateHandle("window.scrollTo(0,0)");
+  }
+
   async waitAndClick(selector) {
+    await this.page.locator(selector).waitFor();
     return await this.page.click(selector);
   }
   async waitAndHardClick(selector) {
-		return await this.page.$eval(selector, element => element.click())
-	}
+    return await this.page.$eval(selector, (element) => element.click());
+  }
   async waitAndFill(selector, text) {
     await this.page.fill(selector, text);
   }

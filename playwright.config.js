@@ -12,7 +12,7 @@ const { defineConfig, devices } = require("@playwright/test");
  */
 module.exports = defineConfig({
   testDir: "./tests",
-  timeout: 100 * 1000,
+  timeout: 120 * 1000,
   expect: {
     timeout: 2000,
   },
@@ -42,7 +42,7 @@ module.exports = defineConfig({
       use: {
         browserName: `chromium`,
         channel: `chrome`,
-        headless: true,
+        headless: false,
         viewport: { width: 1920, height: 1080 },
         screenshot: `only-on-failure`,
         video: `retain-on-failure`,

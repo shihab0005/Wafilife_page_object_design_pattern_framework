@@ -1,6 +1,5 @@
 /* Scenario 1: Verify user Login with all required field and valid, invalid credentials and messages. 
 
-
 Scenario Description: 
 User Navigate To the Home Page and goto Login (লগইন / রেজিস্টার) page and Login with valid username/email
 and password and also Login With invalid Credentials and verify all error message. 

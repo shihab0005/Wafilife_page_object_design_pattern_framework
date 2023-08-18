@@ -90,6 +90,8 @@ class LoginPage extends BasePage {
   }
 
   async clickMyAccountBtn() {
+    // await this.scrollByMouseWheel(myAccount);
+    await this.scrollByMouseWheel();
     await this.waitAndClick(myAccount);
     // await this.waitForPageLoad();
   }

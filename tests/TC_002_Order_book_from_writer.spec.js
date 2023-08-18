@@ -1,7 +1,6 @@
 /* Scenario 1: 
 Search Favourite Writer from Writer Page and view All books and selected One of Your Favourite Book and Confirm order. 
 
-
 Scenario Description: 
 User Navigate To the Home Page and goto Login (লগইন / রেজিস্টার) page and Login with valid username/email and password.Navigate to Writer(লেখক) page Search Writer and Selcet Writter and view 
 all books of the selected writer, select a book from all books and view book details,confirm order by fillup the form of 
@@ -19,7 +18,6 @@ Test test.steps:
 8.	After Successfully fill User Info navigate to My Account Page.
 9.  Successfully Logout From the Website
 	
-
 */
 
 import {

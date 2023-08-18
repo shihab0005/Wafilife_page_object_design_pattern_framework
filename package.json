@@ -17,6 +17,7 @@
     "@playwright/test": "^1.36.1"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^9.3.0",
     "fs": "^0.0.1-security"
   }
 }
